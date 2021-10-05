@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    width: 97%;
+    margin: 0 auto;
+    background-color: rgba(133, 127, 123, 0.5);
+    
+}
+ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 14px 16px;
+    justify-content: space-between;
+}
+li a:hover:not(.active) {
+background-color: #111;
+}
+
+.active {
+background-color: #04AA6D;
+width: 180px;
+}
+.work-heading{
+    background-color: rgb(29, 93, 231) ;
+    border-radius: .375rem;
+    margin: 0 30px;
+    padding: 1.5rem;
+    display: flex;
+
+}
+.img{
+  margin-right: 10px;
+}
+.img img{
+  border-radius: 50%;
+  border-style: dotted;
+  box-shadow: 5px 10px 50px 10px rgb(31, 4, 105);
+
+}
+.work-heading-p{
+    background-color: rgb(29, 93, 231) ;
+    border-radius: .375rem;
+    margin: 0px 5px 30px;
+    padding: .35rem;
+    text-align: center;
+
+}
+.content{
+padding: .5rem;
+height: calc(100vh - 120px);
+}
+.footer{
+background-color: rgb(189, 9, 9);
+text-align: center;
+color: white;
+}
+
+/*All page */
+.allpt{
+    display: flex;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
+}
+.middle{
+    background-color: #f1f1f1;
+    width: 25%;
+    height: 100%;
+    margin: .125rem;
+    font-size: 20px;
+    padding: 2px .7rem;
+}
+
+/* end all page */
+ /* hm page address */
+
+ table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid rgb(255, 255, 255);
+  }
+ /* end hm page address */
+
+
+ /* validation page code */
+ .box{
+    width: 600px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #191919;
+    text-align: center;
+}
+.box h5{
+    color:white;
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+.box input[type = "text"],  .box input[type = "date"], .box input[type = "file"], .box input[type ="password"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #5555FF;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: wheat;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.col-75 {
+    /* float: left;
+    width: 75%;
+    margin-top: 6px; */
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #5555FF;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: wheat;
+    border-radius: 24px;
+    transition: 0.25s;
+  }
+.box input[type = "text"]:focus, .box input[type ="password"]:focus{
+    width: 280px;
+    border-color: #940068;
+}
+
+ /* end validation page code */
+
+
+ /* form design */
+.ctrl {
+    width: 180px;
+    padding: .25rem;
+    border: none;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+   
+}
+
+.ctrl option {
+    background-color: thistle;
+    color: black;
+    text-align: center;
+   
+}
+
+.ctrl::file-selector-button{
+    padding: .375rem 0.75rem;
+ 
+  border-radius: .375rem 0 0 .375rem; 
+  background-color: #5555FF;
+  border-width: 0;
+}
+
+ .btn {
+    font-weight: 400;
+    background-color: #e9ecef;
+    padding: .375rem 1rem;
+    border: solid 1px #5555FF;
+    border-radius: .25rem;
+    width: 100px;
+}
+.btn:hover{
+    border: 2px solid #940068;
+    
+}
+.success{
+    background-color: transparent;
+    color: white;
+}
+
+/* output data  */
+
+
+.outputdata{
+    
+    
+}
+
+.msg{
+    
+}
+
+.error{
+    color:red;
+    border: 2px solid tomato;
+    width: 20%;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+
+/* card design */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+  
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+  
+  button:hover, a:hover {
+    opacity: 0.7;
+  }
+/* end card design */

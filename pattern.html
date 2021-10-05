@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV_1264730</title>
+   <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <ul>
+                <li><a class="active" href="index.html">HM - 1264730</a></li>
+                <li><a href="pattern.html">Pattern</a></li>
+                <li><a href="validation.html">Validation</a></li>
+               
+            </ul>
+        </div>
+        <div class="work-heading-p">
+            <h2>Pattern Page</h2>
+        </div>
+        <div class="content allpt">
+            
+            <div id="literal" class="d1 middle">
+                <h2>Literal Pattern</h2>
+                <hr>
+               
+            </div>
+            <div id="constructor" class="d2 middle">
+                <h2>Constructor Pattern</h2>
+                <hr>
+            </div>
+            <div id="factory" class="d3 middle">
+                <h2>Factory Pattern</h2>
+                <hr>
+            </div>
+            <div id="inheritance" class="d4 middle">
+                <h2>Inheritance Pattern</h2>
+                <hr>
+            </div>
+
+        </div>
+        <div class="footer">
+            <p>&copy; Hasan Mahmud</p>
+        </div>
+    </div>
+    <script>
+       function Trainee(id, name, course){
+            this.id = id;
+            this.name = name;
+            this.course = course;
+        }
+        var tdata = {id: 1, name: "Hasan Mahmud", Course: "ASP.net"} ;
+        document.getElementById("literal").innerHTML += ` Trainee ID: ${tdata.id} <br>
+                                                          Name: ${tdata.name} <br>
+                                                         Course: ${tdata.Course} `;
+
+        
+        //End Literal Pattern object
+        //Constructor Pattern object
+        var tdata2 = new Trainee(2, "Hasan", "Mahmud");
+        Trainee.prototype.info = function () {
+             return `Tr. Id: ${this.id}<br>
+                   Tr. Name: ${this.name}<br />
+                   Course: ${this.course}`
+        };
+        document.getElementById("constructor").innerHTML += tdata2.info();
+            // End Constructor Pattern object
+
+            //Factory Pattern object
+        function createTrainee(id, name, course) {
+             var obj = {};
+             obj.id = id;
+             obj.name = name;
+             obj.course = course;
+             obj.info = function () {
+                  return `Tr. Id: ${this.id}<br>
+                     Tr. Name: ${this.name}<br />
+                     Course: ${this.course}`;
+             };
+             return obj;
+        }
+        var tr2 = createTrainee(3, "Jahid Hasan", "JavaScript");
+        document.getElementById("factory").innerHTML += tr2.info();
+       // End  Factory Pattern object
+
+
+
+
+
+
+   </script>
+
+   <script>
+       
+       //Inheritance 
+       function Person(name) {
+             this.name = name;
+        }
+        Person.prototype.info = function () {
+             return `${this.name}`;
+        };
+        Person.prototype = new Person(); //to intact prototype chain
+        function Trainee(name, course) {
+             Person.call(this, name);
+             this.course = course;
+        }
+        Trainee.prototype.info = function () {
+             return `${this.name}: ${this.course}`;
+        };
+       var t1 = new Person('Trainee 1');
+        var t2 = new Trainee('Trainee 2', 'Python');
+        document.getElementById("inheritance").innerHTML += t1.info();
+        document.getElementById("inheritance").innerHTML += "<br />";
+        document.getElementById("inheritance").innerHTML += t2.info();
+        // end code Inheritance
+   </script>
+    
+</body>
+</html>
